@@ -1,0 +1,277 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #c1a78a;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 5px;
+}
+button:hover,
+button:focus {
+  background-color: #a8876a;
+  outline: none;
+}
+
+/* ===== Header ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #f8f0e3;
+  z-index: 1000;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #6b4e3d;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #6b4e3d;
+  font-weight: 500;
+}
+
+.nav-menu a:focus {
+  outline: 2px dashed #6b4e3d;
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+  background: #f2ebe5;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4a382f;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Featured Product ===== */
+.featured-product {
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-image: url(image/leaf2.jpg);
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+.featured-product .product-text {
+  max-width: 500px;
+}
+
+.featured-product h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #5e4433;
+}
+
+.featured-product ul {
+  margin-bottom: 1rem;
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #444;
+}
+
+/* ===== Products Section ===== */
+.products-section {
+  background-color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background: #f9f6f2;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card h4 {
+  margin-top: 0.5rem;
+  color: #4a382f;
+}
+
+/* ===== Testimonial Section ===== */
+.testimonial {
+  background: #f8f0e3;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 900px;
+}
+
+.testimonial-content img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.testimonial-content p {
+  font-style: italic;
+  color: #333;
+}
+
+
+.newsletter {
+  background-color: #fff9f5;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.newsletter form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.newsletter input[type="email"] {
+  padding: 0.75rem;
+  width: 300px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #938075;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media a img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-media a img:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .featured-product {
+    flex-direction: column;
+    text-align: center;
+  }
+  .testimonial-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.social-media a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #f4e9df;
+}
+.x-icon {
+  font-weight: bold;
+  font-size: 28px;
+  color: black;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+.x-icon:hover {
+  transform: scale(1.2);
+}
